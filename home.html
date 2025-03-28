@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMOTHY KIPKOSGEI | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1A1A2E, #16213E);
+            color: #F5F5F5;
+            overflow-x: hidden;
+            font-size: 18px;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            font-size: 20px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        .navbar a {
+            color: #F5F5F5;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+            position: relative;
+        }
+        .navbar a:hover {
+            color: #F8A33A;
+        }
+        .navbar a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #F8A33A;
+            transition: width 0.3s;
+        }
+        .navbar a:hover::after {
+            width: 100%;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: radial-gradient(circle at top, #F8A33A, #16213E);
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+            font-size: 24px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.07);
+            margin: 40px auto;
+            border-radius: 12px;
+            max-width: 900px;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+            font-size: 20px;
+        }
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .home-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            border: 4px solid transparent;
+            animation: flashing-stroke 1.5s infinite alternate;
+        }
+        
+        @keyframes flashing-stroke {
+            0% {
+                border-color: #F8A33A;
+            }
+            100% {
+                border-color: #16213E;
+            }
+        }
+        
+        .projects-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .project {
+            background: #283149;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+        .project:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+        
+        .project img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Timothy Kipkosgei</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <header class="hero">
+        <h3>Hi, I'm Timothy Kipkosgei</h3>
+        <p>I'm a front-end developer skilled in HTML, CSS, JavaScript, React, and UI/UX design.<br/>I create responsive user-friendly websites that enhance user experience and drive engagement.</p>
+    </header>
+    
+    <section id="home" class="section">
+        <div class="home-container">
+            <img src="web\.trashed-1741812897-DSC_9971.JPG" alt="web/.trashed-1741812882-DSC_9989-1.jpg" class="profile-pic">
+            <h2>Welcome to my online portfolio! Explore my creative projects and journey through design. Enjoy your visit. I'd love to hear from you!</h2>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h3>About Me</h3>
+        <p>A web developer with 2 years of experience, specializing in modern interfaces and interactive designs. I build fast, intuitive, and visually appealing websites that elevate user engagement.</p>
+    </section>
+    
+    <section id="projects" class="section">
+        <h3>Projects</h3>
+        <div class="projects-container">
+            <div class="project"><img src="web/.trashed-1741812882-DSC_9989-1.jpg" alt="Project 1"><h4>Portfolio Website</h4><p>A modern and responsive portfolio website.</p></div>
+            <div class="project"><img src="project2.jpg" alt="Project 2"><h4>E-commerce Platform</h4><p>A full-stack e-commerce web app.</p></div>
+            <div class="project"><img src="project3.jpg" alt="Project 3"><h4>Blog CMS</h4><p>A content management system for bloggers.</p></div>
+            <div class="project"><img src="project4.jpg" alt="Project 4"><h4>Dashboard UI</h4><p>An interactive and dynamic admin dashboard.</p></div>
+        </div>
+    </section>
+</body>
+</html>
